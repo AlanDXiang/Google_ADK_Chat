@@ -1,0 +1,28 @@
+# Core dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-dotenv==1.0.0
+litellm==1.17.9
+
+# Google ADK
+google-adk
+
+# Web and UI dependencies
+jinja2==3.1.2
+python-multipart==0.0.6
+
+# Logging and utilities
+loguru==0.7.2
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Development dependencies
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Optional for future enhancements
+httpx==0.25.2
+websockets==12.0 

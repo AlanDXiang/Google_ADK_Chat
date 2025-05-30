@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面未找到 - Google ADK Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/style.css') }}" rel="stylesheet">
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .error-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+        .error-message {
+            font-size: 1.5rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+        .error-description {
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+        .btn-home {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .icon-1 { top: 10%; left: 10%; animation-delay: 0s; }
+        .icon-2 { top: 20%; right: 15%; animation-delay: 2s; }
+        .icon-3 { bottom: 15%; left: 20%; animation-delay: 4s; }
+        .icon-4 { bottom: 25%; right: 10%; animation-delay: 1s; }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <!-- Floating Icons -->
+        <div class="floating-icon icon-1">🤖</div>
+        <div class="floating-icon icon-2">💬</div>
+        <div class="floating-icon icon-3">🔧</div>
+        <div class="floating-icon icon-4">🌟</div>
+        
+        <div class="error-card">
+            <div class="error-code">404</div>
+            <h2 class="error-message">页面未找到</h2>
+            <p class="error-description">
+                抱歉，您访问的页面不存在。可能是URL输入错误，或者页面已被移动。
+            </p>
+            <div class="d-flex gap-3 justify-content-center">
+                <a href="/" class="btn btn-home">
+                    <i class="fas fa-home me-2"></i>返回首页
+                </a>
+                <button class="btn btn-outline-secondary" onclick="history.back()">
+                    <i class="fas fa-arrow-left me-2"></i>返回上页
+                </button>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="text-muted small">
+                <p class="mb-1">如果您认为这是一个错误，请联系我们：</p>
+                <p class="mb-0">
+                    <i class="fas fa-envelope me-2"></i>
+                    <a href="mailto:support@example.com" class="text-decoration-none">support@example.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+</body>
+</html> 
